@@ -13,16 +13,15 @@ class DetailViewController: UIViewController {
     @IBOutlet var weatherCast: UILabel!
     
     var city: City!
-    private var openWeather = OpenWeather(weather: nil, main: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = city.welcomeLabel
         NetworkManager.shared.fetchOpenWeather(lat: city.lat, lon: city.lon) { openWeather in
             DispatchQueue.main.async {
-                self.openWeather = openWeather
+                self.weatherCast.text = openWeather.labelTest
             }
         }
-        weatherCast.text = openWeather.labelTest
+        
     }
 }
