@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		448F41DC2801BDE9004CF18C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F41DB2801BDE9004CF18C /* AppDelegate.swift */; };
 		448F41DE2801BDE9004CF18C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F41DD2801BDE9004CF18C /* SceneDelegate.swift */; };
-		448F41E02801BDE9004CF18C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F41DF2801BDE9004CF18C /* ViewController.swift */; };
+		448F41E02801BDE9004CF18C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F41DF2801BDE9004CF18C /* MainViewController.swift */; };
 		448F41E32801BDE9004CF18C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 448F41E12801BDE9004CF18C /* Main.storyboard */; };
 		448F41E52801BDEA004CF18C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448F41E42801BDEA004CF18C /* Assets.xcassets */; };
 		448F41E82801BDEA004CF18C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 448F41E62801BDEA004CF18C /* LaunchScreen.storyboard */; };
+		448F41F62801D18C004CF18C /* CityWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F41F52801D18C004CF18C /* CityWeather.swift */; };
+		448F41F92801D215004CF18C /* CitiesDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F41F82801D215004CF18C /* CitiesDataManager.swift */; };
+		44A9BBEF2801EE9200393AE8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9BBEE2801EE9200393AE8 /* DetailViewController.swift */; };
+		44A9BBF12802FF3700393AE8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A9BBF02802FF3700393AE8 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		448F41D82801BDE9004CF18C /* Wheather api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wheather api.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		448F41DB2801BDE9004CF18C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		448F41DD2801BDE9004CF18C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		448F41DF2801BDE9004CF18C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		448F41DF2801BDE9004CF18C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		448F41E22801BDE9004CF18C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		448F41E42801BDEA004CF18C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		448F41E72801BDEA004CF18C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		448F41E92801BDEA004CF18C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		448F41F52801D18C004CF18C /* CityWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeather.swift; sourceTree = "<group>"; };
+		448F41F82801D215004CF18C /* CitiesDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesDataManager.swift; sourceTree = "<group>"; };
+		44A9BBEE2801EE9200393AE8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		44A9BBF02802FF3700393AE8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,67 @@
 		448F41DA2801BDE9004CF18C /* Wheather api */ = {
 			isa = PBXGroup;
 			children = (
-				448F41DB2801BDE9004CF18C /* AppDelegate.swift */,
-				448F41DD2801BDE9004CF18C /* SceneDelegate.swift */,
-				448F41DF2801BDE9004CF18C /* ViewController.swift */,
-				448F41E12801BDE9004CF18C /* Main.storyboard */,
-				448F41E42801BDEA004CF18C /* Assets.xcassets */,
-				448F41E62801BDEA004CF18C /* LaunchScreen.storyboard */,
-				448F41E92801BDEA004CF18C /* Info.plist */,
+				448F41F32801BE3B004CF18C /* Models */,
+				448F41F02801BDFB004CF18C /* Viewcontrollers */,
+				44A9BBF22803040E00393AE8 /* Services */,
+				448F41F12801BE0B004CF18C /* Storyboards */,
+				448F41F22801BE15004CF18C /* Resources */,
+				448F41EF2801BDF4004CF18C /* App */,
 			);
 			path = "Wheather api";
+			sourceTree = "<group>";
+		};
+		448F41EF2801BDF4004CF18C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				448F41DB2801BDE9004CF18C /* AppDelegate.swift */,
+				448F41DD2801BDE9004CF18C /* SceneDelegate.swift */,
+				448F41E92801BDEA004CF18C /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		448F41F02801BDFB004CF18C /* Viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				448F41DF2801BDE9004CF18C /* MainViewController.swift */,
+				44A9BBEE2801EE9200393AE8 /* DetailViewController.swift */,
+			);
+			path = Viewcontrollers;
+			sourceTree = "<group>";
+		};
+		448F41F12801BE0B004CF18C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				448F41E12801BDE9004CF18C /* Main.storyboard */,
+				448F41E62801BDEA004CF18C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		448F41F22801BE15004CF18C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				448F41E42801BDEA004CF18C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		448F41F32801BE3B004CF18C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				448F41F52801D18C004CF18C /* CityWeather.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		44A9BBF22803040E00393AE8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				44A9BBF02802FF3700393AE8 /* NetworkManager.swift */,
+				448F41F82801D215004CF18C /* CitiesDataManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +198,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				448F41E02801BDE9004CF18C /* ViewController.swift in Sources */,
+				448F41E02801BDE9004CF18C /* MainViewController.swift in Sources */,
+				448F41F62801D18C004CF18C /* CityWeather.swift in Sources */,
 				448F41DC2801BDE9004CF18C /* AppDelegate.swift in Sources */,
+				44A9BBF12802FF3700393AE8 /* NetworkManager.swift in Sources */,
+				44A9BBEF2801EE9200393AE8 /* DetailViewController.swift in Sources */,
+				448F41F92801D215004CF18C /* CitiesDataManager.swift in Sources */,
 				448F41DE2801BDE9004CF18C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,12 +353,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TS8JK2YTU3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Wheather api/Info.plist";
+				INFOPLIST_FILE = "Wheather api/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +369,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +382,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TS8JK2YTU3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Wheather api/Info.plist";
+				INFOPLIST_FILE = "Wheather api/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +398,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
