@@ -19,9 +19,8 @@ class DetailViewController: UIViewController {
         navigationItem.title = city.welcomeLabel
         NetworkManager.shared.fetchOpenWeather(lat: city.lat, lon: city.lon) { openWeather in
             DispatchQueue.main.async {
-                self.weatherCast.text = openWeather.labelTest
+                self.weatherCast.text = openWeather.labelForecast
             }
         }
-        
     }
 }

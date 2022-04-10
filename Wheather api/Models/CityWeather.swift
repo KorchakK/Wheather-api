@@ -20,11 +20,13 @@ struct OpenWeather: Decodable {
     let weather: [Conditions]?
     let main: MainWeather?
     
-    var labelTest: String {
+    var labelForecast: String {
         """
-        \(weather?.first?.description ?? "error")
-        \(main?.temp ?? 0)
-        \(main?.feels_like ?? 0)
+        Условия: \(weather?.first?.description ?? "")
+        Температура:  \(main?.temp ?? 0) C
+        Ощущается как: \(main?.feels_like ?? 0) С
+        Минимум: \(main?.temp_min ?? 0) C
+        Максимум: \(main?.temp_max ?? 0) C
         """
     }
 }

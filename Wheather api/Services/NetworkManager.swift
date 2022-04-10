@@ -16,6 +16,7 @@ class NetworkManager {
         let staticUrlFirst = "https://api.openweathermap.org/data/2.5/weather?lat="
         let staticUrlMiddle = "&lon="
         let staticUrlLast = "&APPID=f1962e68826f58324d0fb0d9f9cd1ce7&units=metric&lang=ru"
+        
         guard let url = URL(string: staticUrlFirst + lat + staticUrlMiddle + lon + staticUrlLast) else { return }
         
         URLSession.shared.dataTask(with: url) { data, _, error in

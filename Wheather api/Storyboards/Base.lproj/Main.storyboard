@@ -65,10 +65,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fz8-IJ-dvC">
-                                <rect key="frame" x="20" y="172" width="388" height="250"/>
+                                <rect key="frame" x="20" y="118" width="388" height="250"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="546-kX-haF">
-                                        <rect key="frame" x="30" y="30" width="52" height="190"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="546-kX-haF">
+                                        <rect key="frame" x="30" y="30" width="0.0" height="190"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -97,7 +97,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fz8-IJ-dvC" firstAttribute="leading" secondItem="YPL-Ly-DaR" secondAttribute="leading" constant="20" id="5Ga-SW-sAg"/>
-                            <constraint firstItem="fz8-IJ-dvC" firstAttribute="top" secondItem="YPL-Ly-DaR" secondAttribute="top" constant="84" id="Pee-AV-QbM"/>
+                            <constraint firstItem="fz8-IJ-dvC" firstAttribute="top" secondItem="YPL-Ly-DaR" secondAttribute="top" constant="30" id="Pee-AV-QbM"/>
                             <constraint firstItem="YPL-Ly-DaR" firstAttribute="trailing" secondItem="fz8-IJ-dvC" secondAttribute="trailing" constant="20" id="bid-25-npA"/>
                         </constraints>
                     </view>
