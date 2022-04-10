@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class NetworkManager {
     
@@ -26,10 +27,26 @@ class NetworkManager {
             }
             do {
                 let openWeather = try JSONDecoder().decode(OpenWeather.self, from: data)
-                completion(openWeather)
+                DispatchQueue.main.async { completion(openWeather) }
             } catch let error {
                 print(error.localizedDescription)
             }
         }.resume()
     }
+    
+    func fetchImageWeather(idIcon: String, completion: @escaping (UIImage) -> Void) {
+        guard let url = URL(string: "https://openweathermap.org/img/wn/" + idIcon + "@2x.png") else { return }
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data else {
+                print(error?.localizedDescription ?? "No description error")
+                return
+            }
+            guard let image = UIImage(data: data) else {
+                return
+            }
+            DispatchQueue.main.async { completion(image) }
+        }.resume()
+    }
+    
+    private init() {}
 }

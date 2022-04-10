@@ -104,7 +104,7 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="buY-gm-KDS"/>
                     <connections>
                         <outlet property="weatherCast" destination="546-kX-haF" id="Gjr-8V-pyl"/>
-                        <outlet property="weatherImage" destination="M7f-j7-Nma" id="ftw-UV-UaS"/>
+                        <outlet property="weatherImage" destination="M7f-j7-Nma" id="YZM-7b-o61"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78b-yg-aUY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
