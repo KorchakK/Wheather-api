@@ -11,6 +11,8 @@ import UIKit
 class NetworkManager {
     
     static let shared = NetworkManager()
+    
+    private init() {}
 
     func fetchOpenWeather(lat: String, lon: String, completion: @escaping (OpenWeather) -> Void) {
         
@@ -47,6 +49,4 @@ class NetworkManager {
             DispatchQueue.main.async { completion(image) }
         }.resume()
     }
-    
-    private init() {}
 }

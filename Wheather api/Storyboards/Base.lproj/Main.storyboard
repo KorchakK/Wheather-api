@@ -67,8 +67,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fz8-IJ-dvC">
                                 <rect key="frame" x="20" y="118" width="388" height="250"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузка данных..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="546-kX-haF">
-                                        <rect key="frame" x="30" y="30" width="185.66666666666666" height="190"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="546-kX-haF">
+                                        <rect key="frame" x="30" y="30" width="0.0" height="190"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -77,6 +77,11 @@
                                         <rect key="frame" x="280" y="8" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="RK1-7v-5mp">
+                                        <rect key="frame" x="184" y="115" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
@@ -103,6 +108,7 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="buY-gm-KDS"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="RK1-7v-5mp" id="8gR-GD-Y4M"/>
                         <outlet property="weatherCast" destination="546-kX-haF" id="Gjr-8V-pyl"/>
                         <outlet property="weatherImage" destination="M7f-j7-Nma" id="YZM-7b-o61"/>
                     </connections>
