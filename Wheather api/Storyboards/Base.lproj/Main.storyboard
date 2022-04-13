@@ -67,26 +67,40 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fz8-IJ-dvC">
                                 <rect key="frame" x="20" y="118" width="388" height="250"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="546-kX-haF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="546-kX-haF">
                                         <rect key="frame" x="30" y="30" width="0.0" height="190"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M7f-j7-Nma">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M7f-j7-Nma">
                                         <rect key="frame" x="280" y="8" width="100" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="hzq-Ed-JhL"/>
+                                            <constraint firstAttribute="width" constant="100" id="v0B-Lq-tqX"/>
+                                        </constraints>
                                     </imageView>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="RK1-7v-5mp">
                                         <rect key="frame" x="184" y="115" width="20" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </activityIndicatorView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoOpenWeather" translatesAutoresizingMaskIntoConstraints="NO" id="m6D-oJ-Rai">
+                                        <rect key="frame" x="280" y="207" width="100" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="T1S-nv-cD1"/>
+                                            <constraint firstAttribute="height" constant="35" id="p77-Xn-yUP"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="546-kX-haF" secondAttribute="trailing" constant="120" id="2Bp-jH-FnV"/>
+                                    <constraint firstItem="M7f-j7-Nma" firstAttribute="top" secondItem="fz8-IJ-dvC" secondAttribute="top" constant="8" id="0sY-ny-mjg"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="546-kX-haF" secondAttribute="trailing" constant="100" id="2Bp-jH-FnV"/>
                                     <constraint firstItem="546-kX-haF" firstAttribute="leading" secondItem="fz8-IJ-dvC" secondAttribute="leading" constant="30" id="Ecx-HL-36R"/>
+                                    <constraint firstAttribute="trailing" secondItem="M7f-j7-Nma" secondAttribute="trailing" constant="8" id="LQr-Ib-V6h"/>
+                                    <constraint firstAttribute="trailing" secondItem="m6D-oJ-Rai" secondAttribute="trailing" constant="8" id="SLR-bP-Ki0"/>
+                                    <constraint firstAttribute="bottom" secondItem="m6D-oJ-Rai" secondAttribute="bottom" constant="8" id="Zgh-Dk-Wag"/>
                                     <constraint firstItem="546-kX-haF" firstAttribute="top" secondItem="fz8-IJ-dvC" secondAttribute="top" constant="30" id="hFO-8c-wHW"/>
                                     <constraint firstAttribute="bottom" secondItem="546-kX-haF" secondAttribute="bottom" constant="30" id="oFx-8S-Oxf"/>
                                     <constraint firstAttribute="height" constant="250" id="w1V-8c-iEO"/>
@@ -137,6 +151,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="logoOpenWeather" width="431" height="184"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

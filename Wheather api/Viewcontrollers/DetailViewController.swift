@@ -20,12 +20,17 @@ class DetailViewController: UIViewController {
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
         navigationItem.title = city.welcomeLabel
-        NetworkManager.shared.fetchOpenWeather(lat: city.lat, lon: city.lon) { openWeather in
-            self.weatherCast.text = openWeather.labelForecast
-            let idIcon = openWeather.weather?.first?.icon ?? "04d"
-            NetworkManager.shared.fetchImageWeather(idIcon: idIcon) { image in
-                self.weatherImage.image = image
-                self.activityIndicator.stopAnimating()
+        NetworkManager.shared.fetchOpenWeather(from: city.cityWeatherUrl) { result in
+            switch result {
+            case .success(let openWeather):
+                self.weatherCast.text = openWeather.labelForecast
+                let icon = openWeather.weather?.first?.iconUrl ?? "2d"
+                NetworkManager.shared.fetchWeatherImage(from: icon) { image in
+                    self.weatherImage.image = image
+                    self.activityIndicator.stopAnimating()
+                }
+            case .failure(let error):
+                print(error)
             }
         }
     }
