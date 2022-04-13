@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dkz-tC-ZAd">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Wheather_api" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wV4-Eo-K0O">
-                                <rect key="frame" x="54" y="365.66666666666674" width="320" height="301"/>
+                                <rect key="frame" x="0.0" y="179" width="320" height="301"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите город:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNa-st-gXd">
-                                        <rect key="frame" x="45.666666666666671" y="0.0" width="228.66666666666663" height="36"/>
+                                        <rect key="frame" x="45.5" y="0.0" width="229" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="44" width="320" height="216"/>
                                     </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrO-oN-eIh">
-                                        <rect key="frame" x="82" y="267.99999999999994" width="156" height="33"/>
+                                        <rect key="frame" x="82" y="268" width="156" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Посмотреть погоду"/>
@@ -61,11 +61,11 @@
             <objects>
                 <viewController id="Dqg-2M-V1b" customClass="DetailViewController" customModule="Wheather_api" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1dP-Ud-tNw">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fz8-IJ-dvC">
-                                <rect key="frame" x="20" y="118" width="388" height="250"/>
+                                <rect key="frame" x="20" y="74" width="280" height="250"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="546-kX-haF">
                                         <rect key="frame" x="30" y="30" width="0.0" height="190"/>
@@ -74,22 +74,19 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M7f-j7-Nma">
-                                        <rect key="frame" x="280" y="8" width="100" height="100"/>
+                                        <rect key="frame" x="200" y="8" width="72" height="72"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="hzq-Ed-JhL"/>
-                                            <constraint firstAttribute="width" constant="100" id="v0B-Lq-tqX"/>
+                                            <constraint firstAttribute="width" secondItem="M7f-j7-Nma" secondAttribute="height" multiplier="1:1" id="5mx-rx-21V"/>
                                         </constraints>
                                     </imageView>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="RK1-7v-5mp">
-                                        <rect key="frame" x="184" y="115" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="RK1-7v-5mp">
+                                        <rect key="frame" x="121.5" y="106.5" width="37" height="37"/>
                                         <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </activityIndicatorView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoOpenWeather" translatesAutoresizingMaskIntoConstraints="NO" id="m6D-oJ-Rai">
-                                        <rect key="frame" x="280" y="207" width="100" height="35"/>
+                                        <rect key="frame" x="207.5" y="214.5" width="64.5" height="27.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="T1S-nv-cD1"/>
-                                            <constraint firstAttribute="height" constant="35" id="p77-Xn-yUP"/>
+                                            <constraint firstAttribute="width" secondItem="m6D-oJ-Rai" secondAttribute="height" multiplier="431:184" id="NJu-Px-Me3"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -97,10 +94,14 @@
                                 <constraints>
                                     <constraint firstItem="M7f-j7-Nma" firstAttribute="top" secondItem="fz8-IJ-dvC" secondAttribute="top" constant="8" id="0sY-ny-mjg"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="546-kX-haF" secondAttribute="trailing" constant="100" id="2Bp-jH-FnV"/>
+                                    <constraint firstItem="RK1-7v-5mp" firstAttribute="centerX" secondItem="fz8-IJ-dvC" secondAttribute="centerX" id="BTa-pw-CEg"/>
                                     <constraint firstItem="546-kX-haF" firstAttribute="leading" secondItem="fz8-IJ-dvC" secondAttribute="leading" constant="30" id="Ecx-HL-36R"/>
+                                    <constraint firstItem="M7f-j7-Nma" firstAttribute="width" secondItem="fz8-IJ-dvC" secondAttribute="width" multiplier="0.257732" id="HCE-Lq-ngx"/>
                                     <constraint firstAttribute="trailing" secondItem="M7f-j7-Nma" secondAttribute="trailing" constant="8" id="LQr-Ib-V6h"/>
                                     <constraint firstAttribute="trailing" secondItem="m6D-oJ-Rai" secondAttribute="trailing" constant="8" id="SLR-bP-Ki0"/>
                                     <constraint firstAttribute="bottom" secondItem="m6D-oJ-Rai" secondAttribute="bottom" constant="8" id="Zgh-Dk-Wag"/>
+                                    <constraint firstItem="m6D-oJ-Rai" firstAttribute="width" secondItem="fz8-IJ-dvC" secondAttribute="width" multiplier="0.23" id="cia-0G-7aq"/>
+                                    <constraint firstItem="RK1-7v-5mp" firstAttribute="centerY" secondItem="fz8-IJ-dvC" secondAttribute="centerY" id="eR4-Qk-Zpj"/>
                                     <constraint firstItem="546-kX-haF" firstAttribute="top" secondItem="fz8-IJ-dvC" secondAttribute="top" constant="30" id="hFO-8c-wHW"/>
                                     <constraint firstAttribute="bottom" secondItem="546-kX-haF" secondAttribute="bottom" constant="30" id="oFx-8S-Oxf"/>
                                     <constraint firstAttribute="height" constant="250" id="w1V-8c-iEO"/>
@@ -137,7 +138,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dkz-tC-ZAd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="TFS-xz-3ae">
-                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
